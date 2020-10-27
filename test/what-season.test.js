@@ -78,7 +78,7 @@ describe('What season', () => {
             try {
                 getSeason();
             } catch(err) {
-              if (err._validationProp === 'NA') {
+            if (err._validationProp === 'NA') {
                 this.skip();
               } else {
                 res = 'FAIL';
