@@ -10,11 +10,9 @@ const chainMaker = {
     return this;
   },
   removeLink(position) {
-    try {
-      if (!Number.isInteger(position) || position < 0) throw new TypeError("Is not valid number");
-    } catch (e) {
-      // alert(e);
-    }
+  
+      if (!Number.isInteger(position) || position < 0) throw new Error("Is not valid number");
+    
     this.arr.splice(position - 1, 1);
     return this;
   },
@@ -23,7 +21,7 @@ const chainMaker = {
     return this;
   },
   finishChain() {
-    return this.arr.join('--');
+    return this.arr.join('~~');
   }
 };
 

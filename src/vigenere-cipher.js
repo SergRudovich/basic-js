@@ -78,7 +78,7 @@ class VigenereCipheringMachine {
 
   decrypt(message, key) {
 
-
+    this.decryptedMessage = '';
     //dublicate key to messege length
     key = key.repeat(Math.floor(message.length / key.length) + 1).slice(0, message.length);
     message = message.toUpperCase();
